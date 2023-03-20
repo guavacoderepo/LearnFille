@@ -10,3 +10,4 @@ const Color btnBlue = Color(0xff21C8F6);
 Color textGrey = Colors.black.withOpacity(0.5);
 const Color inputGrey = Color.fromARGB(255, 232, 237, 243);
 const Color activeBlue = Color(0xff21C8F6);
+const Color iconGrey = Color(0xff888888);

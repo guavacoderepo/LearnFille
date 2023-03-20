@@ -63,7 +63,7 @@ class _DashboardState extends State<Dashboard> {
                   ),
 
                   vertSpacer(20),
-                  
+
 // ************************************
 // add content here
                 ],
@@ -72,7 +72,19 @@ class _DashboardState extends State<Dashboard> {
           )
         ],
       ),
-      bottomNavigationBar: ,
+      bottomNavigationBar: BottomNavigationBar(
+          elevation: 0,
+          unselectedItemColor: iconGrey,
+          selectedItemColor: darkColor,
+          selectedIconTheme: IconThemeData(size: 35),
+          items: const [
+            BottomNavigationBarItem(icon: Icon(Icons.search), label: "Explore"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.edit_note_outlined), label: "Learn"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.settings), label: "Setings"),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile")
+          ]),
     );
   }
 }
