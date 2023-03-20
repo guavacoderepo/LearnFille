@@ -3,7 +3,6 @@ import 'package:learnfille/constants/colors.dart';
 import 'package:learnfille/constants/images.dart';
 import 'package:learnfille/constants/padding.dart';
 import 'package:learnfille/constants/spacer.dart';
-import 'package:learnfille/utils/appbars.dart';
 
 import '../utils/text.dart';
 
@@ -46,7 +45,7 @@ class _OnBoardingState extends State<OnBoarding> {
                   vertSpacer(30),
                   Align(
                     alignment: Alignment.center,
-                    child: Image.asset(OnBoardingimg),
+                    child: Image.asset(onBoardingimg),
                   ),
                   vertSpacer(23),
 // introduction text
@@ -57,7 +56,7 @@ class _OnBoardingState extends State<OnBoarding> {
 // login btn design
                   SizedBox(
                     width: MediaQuery.of(context).size.width,
-                    height: 50,
+                    height: 60,
                     child: TextButton(
                       style: TextButton.styleFrom(
                         backgroundColor: btnYellow,
@@ -71,7 +70,7 @@ class _OnBoardingState extends State<OnBoarding> {
 // register btn design
                   SizedBox(
                     width: MediaQuery.of(context).size.width,
-                    height: 50,
+                    height: 60,
                     child: OutlinedButton(
                       style: OutlinedButton.styleFrom(
                         side: const BorderSide(color: btnBlue, width: 1),

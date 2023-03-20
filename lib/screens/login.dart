@@ -14,8 +14,8 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  TextEditingController _emailctr = TextEditingController();
-  TextEditingController _pwdctr = TextEditingController();
+  final TextEditingController _emailctr = TextEditingController();
+  final TextEditingController _pwdctr = TextEditingController();
 
 // create some variables
   bool? visible = false;

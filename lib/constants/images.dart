@@ -2,7 +2,7 @@
 String logoImg = "assets/images/logo.png";
 
 // onbording screen images
-String OnBoardingimg = "assets/infographics/onboardingImg.png";
+String onBoardingimg = "assets/infographics/onboardingImg.png";
 
 // login screen images
 
@@ -10,6 +10,7 @@ String OnBoardingimg = "assets/infographics/onboardingImg.png";
 String googleImg = "assets/images/Google.png";
 
 // dashboard page image
+String dashboardimg = "assets/infographics/dashbordimg.png";
 
 //
 
