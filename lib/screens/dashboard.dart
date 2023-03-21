@@ -3,7 +3,6 @@ import 'package:learnfille/constants/colors.dart';
 import 'package:learnfille/constants/padding.dart';
 import 'package:learnfille/utils/appbars.dart';
 import 'package:learnfille/utils/text.dart';
-import 'package:marquee/marquee.dart';
 import '../constants/images.dart';
 import '../constants/spacer.dart';
 
@@ -51,7 +50,7 @@ class _DashboardState extends State<Dashboard> {
                         SizedBox(
                           width: MediaQuery.of(context).size.width * 0.4,
                           child:
-                              font4("What would you Like to learn today?", 15),
+                              font4("What would you Like to learn today?", 16),
                         ),
 // top image
 
@@ -63,6 +62,51 @@ class _DashboardState extends State<Dashboard> {
                   ),
 
                   vertSpacer(20),
+// other section
+                  font4("Categories", 16, color: activeBlue),
+                  vertSpacer(10),
+
+                  SizedBox(
+                    height: 35,
+                    child: ListView(
+                      shrinkWrap: true,
+                      physics: const ScrollPhysics(),
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        TextButton(
+                            style: TextButton.styleFrom(
+                                backgroundColor: iconGrey.withOpacity(0.3)),
+                            onPressed: () {},
+                            child: font4("All Courses", 15)),
+                        TextButton(
+                            onPressed: () {}, child: font4("Design", 15)),
+                        TextButton(
+                            onPressed: () {}, child: font4("Development", 15)),
+                        TextButton(
+                            onPressed: () {}, child: font4("Programming", 15))
+                      ],
+                    ),
+                  ),
+
+                  vertSpacer(10),
+// other section
+                  font4("Features", 16, color: activeBlue),
+                  vertSpacer(20),
+
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.45,
+                    child: GridView.count(
+                      crossAxisCount: 2,
+                      crossAxisSpacing: 20,
+                      mainAxisSpacing: 20,
+                      children: [
+                        gridCard(cvimg, "CV", cvcolor),
+                        gridCard(donationimg, "Donations", donationcolor),
+                        gridCard(jobimg, "Find job", jobcolor),
+                        gridCard(communityimg, "Community", communitycolor)
+                      ],
+                    ),
+                  ),
 
 // ************************************
 // add content here
@@ -72,19 +116,25 @@ class _DashboardState extends State<Dashboard> {
           )
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-          elevation: 0,
-          unselectedItemColor: iconGrey,
-          selectedItemColor: darkColor,
-          selectedIconTheme: IconThemeData(size: 35),
-          items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.search), label: "Explore"),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.edit_note_outlined), label: "Learn"),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.settings), label: "Setings"),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile")
-          ]),
     );
   }
+
+  Widget gridCard(String img, String title, Color color) => InkWell(
+        onTap: () => {},
+        child: Container(
+          height: MediaQuery.of(context).size.height * 0.2,
+          padding: const EdgeInsets.only(bottom: 7),
+          decoration: BoxDecoration(
+            color: color,
+            borderRadius: BorderRadius.circular(10),
+            image: DecorationImage(
+              image: AssetImage(img),
+            ),
+          ),
+          child: Align(
+            alignment: Alignment.bottomCenter,
+            child: font4(title, 14),
+          ),
+        ),
+      );
 }

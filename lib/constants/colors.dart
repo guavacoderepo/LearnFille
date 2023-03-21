@@ -11,3 +11,10 @@ Color textGrey = Colors.black.withOpacity(0.5);
 const Color inputGrey = Color.fromARGB(255, 232, 237, 243);
 const Color activeBlue = Color(0xff21C8F6);
 const Color iconGrey = Color(0xff888888);
+const Color greyColor = Color(0xff8F8E94);
+
+// lading page icons
+Color cvcolor = Color(0xff637BFF).withOpacity(0.1);
+Color donationcolor = Color(0xff21C8F6).withOpacity(0.1);
+Color jobcolor = Color(0xffF19A1A).withOpacity(0.1);
+Color communitycolor = Color(0xff4CD964).withOpacity(0.1);

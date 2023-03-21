@@ -18,3 +18,14 @@ AppBar dashbordAppbar() => AppBar(
       ),
       title: font5("Hi, Grace", 15),
     );
+
+AppBar otherAppbar() => AppBar(
+      backgroundColor: transparent,
+      elevation: 0,
+      leading: const Padding(
+          padding: EdgeInsets.only(left: 5),
+          child: Icon(
+            Icons.arrow_back_ios,
+            color: darkColor,
+          )),
+    );
