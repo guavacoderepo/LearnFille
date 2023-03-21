@@ -14,7 +14,10 @@ const Color iconGrey = Color(0xff888888);
 const Color greyColor = Color(0xff8F8E94);
 
 // lading page icons
-Color cvcolor = Color(0xff637BFF).withOpacity(0.1);
-Color donationcolor = Color(0xff21C8F6).withOpacity(0.1);
-Color jobcolor = Color(0xffF19A1A).withOpacity(0.1);
-Color communitycolor = Color(0xff4CD964).withOpacity(0.1);
+Color cvcolor = const Color(0xff637BFF).withOpacity(0.1);
+Color donationcolor = const Color(0xff21C8F6).withOpacity(0.1);
+Color jobcolor = const Color(0xffF19A1A).withOpacity(0.1);
+Color communitycolor = const Color(0xff4CD964).withOpacity(0.1);
+
+// learing page
+Color bodygrey = Color(0xffF6F6F6);

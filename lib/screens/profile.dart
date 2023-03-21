@@ -5,8 +5,6 @@ import 'package:learnfille/constants/spacer.dart';
 import 'package:learnfille/utils/appbars.dart';
 import 'package:learnfille/utils/text.dart';
 
-import '../constants/images.dart';
-
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
 
@@ -18,7 +16,7 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: otherAppbar(),
+      appBar: otherAppbar("Profile"),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.only(left: bodyPadding, right: bodyPadding),
@@ -37,8 +35,9 @@ class _ProfilePageState extends State<ProfilePage> {
                       CircleAvatar(
                         backgroundColor: iconGrey.withOpacity(0.1),
                         radius: 60,
-                        backgroundImage: NetworkImage(
-                            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzmlfDMANvrYSMZw1Zj3oFQLjqrO-T2dK6nw&usqp=CAU"),
+                        backgroundImage: const NetworkImage(
+                          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzmlfDMANvrYSMZw1Zj3oFQLjqrO-T2dK6nw&usqp=CAU",
+                        ),
                       ),
 
 //  add camera icon for changing image

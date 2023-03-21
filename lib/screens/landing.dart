@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learnfille/screens/dashboard.dart';
+import 'package:learnfille/screens/learning.dart';
 import 'package:learnfille/screens/profile.dart';
 import '../constants/colors.dart';
 
@@ -12,7 +13,7 @@ class LandingPage extends StatefulWidget {
 
 class _LandingPageState extends State<LandingPage> {
   Widget dashboard = Dashboard();
-  Widget learn = Dashboard();
+  Widget learn = LearningPage();
   Widget setting = Dashboard();
   Widget profile = ProfilePage();
 
@@ -28,6 +29,7 @@ class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: lightColor,
       body: IndexedStack(
         index: _currentIndex,
         children: pages!,
